@@ -10,11 +10,15 @@ The module for serialization is also avaiable.
 
 Read serialized files
 
-   $ ./arpa.py arpa.pickle
+    $ ./arpa.py arpa.pickle
 
-Read text ARPA files.
+Read text ARPA files:
 
-   $ ./arpa.py --text arpa.txt
+    $ ./arpa.py --text arpa.txt
+
+Serialize ARPA files
+
+    $ ./arpa_serializer.py arpa.txt arpa.pickle
 
 ## License ##
 
