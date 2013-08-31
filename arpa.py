@@ -85,13 +85,9 @@ def read_higher_order_ngram(mm, n, ngram_order, vocab):
 # too long...
 def read_arpa(filename, length=0):
     """Read text ARPA format using the mmap module."""
-
-    # giant unigram array
     ptr = 0
     vocab_array = []
     vocab = defaultdict(int)
-
-    # The N-gram order we're reading.
     ngram_order = 1
 
     # array of unigram, bigram, trigram, ... entries
@@ -99,7 +95,7 @@ def read_arpa(filename, length=0):
 
     with open(filename, 'r+b') as f:
         mm = mmap.mmap(f.fileno(), length, mmap.MAP_SHARED)
-
+        # Check the N-gram order of this arpa file.
         ngram_order = read_header(mm)
 
         # Unigram
