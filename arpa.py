@@ -84,7 +84,7 @@ def read_higher_order_ngram(mm, n, ngram_order, vocab):
 
 # too long...
 def read_arpa(filename, length=0):
-    "Read text ARPA format using mmap module."
+    """Read text ARPA format using the mmap module."""
 
     # giant unigram array
     ptr = 0
